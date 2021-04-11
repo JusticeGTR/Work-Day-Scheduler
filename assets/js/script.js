@@ -2,6 +2,9 @@ var time = moment().format("dddd, MMMM Do YYYY, hh:mm:ss a");
 var buttons = $(".saveBtn");
 var taskHour = $("hour");
 var inputValue = $("input")
+var amSection = $(".am");
+var pmSection = $(".pm");
+var rows = $(".rows")
 
 function displayTime() {
     time = moment().format("dddd, MMMM Do YYYY, hh:mm:ss a");
@@ -13,31 +16,45 @@ $(document).ready(function() {
 });
 
 function colorChanger() {
-    var nineAm = $("#nineAm").moment("dddd, MMMM Do YYYY, 09:mm:ss am")
-    var tenAm = $("#tenAm").moment("dddd, MMMM Do YYYY, 10:mm:ss am")
-    var elevenAm = $("#elevenAm").moment("dddd, MMMM Do YYYY, 11:mm:ss am")
-    var twelveAm = $("#twelveAm").moment("dddd, MMMM Do YYYY, 12:mm:ss am")
-    var onePm = $("#onePm").moment("dddd, MMMM Do YYYY, 01:mm:ss pm")
-    var twoPm = $("#twoPm").moment("dddd, MMMM Do YYYY, 02:mm:ss pm")
-    var threePm = $("#threePm").moment("dddd, MMMM Do YYYY, 03:mm:ss pm")
-    var fourPm = $("#fourPm").moment("dddd, MMMM Do YYYY, 04:mm:ss pm")
-    var fivePm = $("#fivePm").moment("dddd, MMMM Do YYYY, 05:mm:ss pm")
-    var colorTime = [nineAm, tenAm, elevenAm, twelveAm, onePm, twoPm, threePm, fourPm, fivePm] 
-    console.log(colorTime)
+    // var nineAm = $("#nineAm")
+    // var tenAm = $("#tenAm")
+    // var elevenAm = $("#elevenAm")
+    // var twelveAm = $("#twelveAm")
+    // var onePm = $("#onePm")
+    // var twoPm = $("#twoPm")
+    // var threePm = $("#threePm")
+    // var fourPm = $("#fourPm")
+    // var fivePm = $("#fivePm")
+    // var colorTime = [nineAm, tenAm, elevenAm, twelveAm, onePm, twoPm, threePm, fourPm, fivePm] 
+    // console.log(colorTime)
+ 
+    var eachAmSection = 
     
     var hourColor = moment().format("hh")
+    var amOrPm = moment().format("a")
+
     console.log(hourColor);
-    for(var i = 0; i <colorTime.length; i++) {
-        while(colorTime[i] > time) {
-            colorTime[i].addClass("past")
-        }
-        while(colorTime[i] === time) {
-            colorTime[i].addClass("present")
-        }
-        while(colorTime[i] < time) {
-            colorTime[i].addClass("future")
+
+    //if time is am
+    //for loop to cycle through all div's with class am. if section is greater than time, set class to future
+    // else if section is same as time, set class to present, else set class to past
+    // else if
+    //for loop to cycle through all div's with class pm. if section is greater than time, set class to future
+    // else if section is same as time, set class to present, else set class to past
+    //else set class to future
+    if(amOrPm == "am"){
+        for(var i = 0; i <amSection.length; i++) {
+            if(colorTime[i] === && amSection) {
+                if(amOrPm == "am") {
+                    
+                } else {
+                colorTime[i].addClass("past")
+                }
+            }
+            
         }
     }
+    
 }
 
 colorChanger();
