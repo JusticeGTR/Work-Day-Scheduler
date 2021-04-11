@@ -1,4 +1,7 @@
 var time = moment().format("dddd, MMMM Do YYYY, hh:mm:ss a");
+var buttons = $(".saveBtn");
+var taskHour = $("hour");
+var inputValue = $("input")
 
 function displayTime() {
     time = moment().format("dddd, MMMM Do YYYY, hh:mm:ss a");
@@ -37,4 +40,17 @@ function colorChanger() {
     }
 }
 
-// colorChanger();
+colorChanger();
+
+function saveTasks() {
+
+    function registerTask(){
+    localStorage.setItem("")
+    }
+
+    function lastRegistered(){
+        localStorage.getItem("")
+    }
+}
+
+buttons.on("click", saveTasks)
