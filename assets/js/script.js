@@ -16,19 +16,22 @@ $(document).ready(function() {
 });
 
 function colorChanger() {
-    // var nineAm = $("#nineAm")
-    // var tenAm = $("#tenAm")
-    // var elevenAm = $("#elevenAm")
-    // var twelveAm = $("#twelveAm")
-    // var onePm = $("#onePm")
-    // var twoPm = $("#twoPm")
-    // var threePm = $("#threePm")
-    // var fourPm = $("#fourPm")
-    // var fivePm = $("#fivePm")
-    // var colorTime = [nineAm, tenAm, elevenAm, twelveAm, onePm, twoPm, threePm, fourPm, fivePm] 
-    // console.log(colorTime)
- 
-    var eachAmSection = 
+    var nineAm = $("#nineAm")
+    var tenAm = $("#tenAm")
+    var elevenAm = $("#elevenAm")
+    var twelveAm = $("#twelveAm")
+    var onePm = $("#onePm")
+    var twoPm = $("#twoPm")
+    var threePm = $("#threePm")
+    var fourPm = $("#fourPm")
+    var fivePm = $("#fivePm")
+    var amColorTime = [nineAm, tenAm, elevenAm, twelveAm] 
+    var pmColorTime = [onePm, twoPm, threePm, fourPm, fivePm]
+    var amTime = ["01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24"]
+    var pmTime = ["-11", "-10", "-9", "-8", "-7", "-6", "-5", "-4", "-3", "-2", "-1", "0", "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12"]
+    console.log(colorTime)
+    
+    var eachAmSection = [];
     
     var hourColor = moment().format("hh")
     var amOrPm = moment().format("a")
